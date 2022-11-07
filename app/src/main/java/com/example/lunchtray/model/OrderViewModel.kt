@@ -15,13 +15,11 @@
  */
 package com.example.lunchtray.model
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.lunchtray.data.DataSource
-import com.example.lunchtray.data.DataSource.menuItems
 import java.text.NumberFormat
 
 class OrderViewModel : ViewModel() {
@@ -86,9 +84,7 @@ class OrderViewModel : ViewModel() {
             previousEntreePrice = _entree.value!!.num
 
         }
-        if (_subtotal.value != null){
-            _subtotal.value = (_subtotal.value)?.minus(previousEntreePrice)
-        }
+
         _entree.value = menuItems.get(entree)
         updateSubtotal(_entree.value!!.num
         )
@@ -113,9 +109,7 @@ class OrderViewModel : ViewModel() {
             previousSidePrice = _side.value!!.num
 
         }
-        if (_subtotal.value != null){
-            _subtotal.value = (_subtotal.value)?.minus(previousSidePrice)
-        }
+
         _side.value = menuItems.get(side)
         updateSubtotal(_side.value!!.num
         )
@@ -144,9 +138,7 @@ class OrderViewModel : ViewModel() {
             previousAccompanimentPrice = _accompaniment.value!!.num
 
         }
-        if (_subtotal.value != null){
-            _subtotal.value = (_subtotal.value)?.minus(previousAccompanimentPrice)
-        }
+
         _accompaniment.value = menuItems.get(accompaniment)
         updateSubtotal(_accompaniment.value!!.num
         )

@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,22 +24,16 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   public final RadioGroup accompanimentOptions;
 
   @NonNull
-  public final RadioButton berries;
+  public final CheckBox berries;
 
   @NonNull
   public final TextView berriesDescription;
 
   @NonNull
-  public final TextView berriesPrice;
-
-  @NonNull
-  public final RadioButton bread;
+  public final CheckBox bread;
 
   @NonNull
   public final TextView breadDescription;
-
-  @NonNull
-  public final TextView breadPrice;
 
   @NonNull
   public final Button cancelButton;
@@ -51,13 +45,10 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   public final Button nextButton;
 
   @NonNull
-  public final RadioButton pickles;
+  public final CheckBox pickles;
 
   @NonNull
   public final TextView picklesDescription;
-
-  @NonNull
-  public final TextView picklesPrice;
 
   @NonNull
   public final TextView subtotal;
@@ -69,25 +60,21 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   protected AccompanimentMenuFragment mAccompanimentMenuFragment;
 
   protected FragmentAccompanimentMenuBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, RadioGroup accompanimentOptions, RadioButton berries,
-      TextView berriesDescription, TextView berriesPrice, RadioButton bread,
-      TextView breadDescription, TextView breadPrice, Button cancelButton, View divider,
-      Button nextButton, RadioButton pickles, TextView picklesDescription, TextView picklesPrice,
+      int _localFieldCount, RadioGroup accompanimentOptions, CheckBox berries,
+      TextView berriesDescription, CheckBox bread, TextView breadDescription, Button cancelButton,
+      View divider, Button nextButton, CheckBox pickles, TextView picklesDescription,
       TextView subtotal) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accompanimentOptions = accompanimentOptions;
     this.berries = berries;
     this.berriesDescription = berriesDescription;
-    this.berriesPrice = berriesPrice;
     this.bread = bread;
     this.breadDescription = breadDescription;
-    this.breadPrice = breadPrice;
     this.cancelButton = cancelButton;
     this.divider = divider;
     this.nextButton = nextButton;
     this.pickles = pickles;
     this.picklesDescription = picklesDescription;
-    this.picklesPrice = picklesPrice;
     this.subtotal = subtotal;
   }
 

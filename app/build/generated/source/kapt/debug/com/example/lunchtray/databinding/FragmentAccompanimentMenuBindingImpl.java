@@ -14,8 +14,8 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.accompaniment_options, 13);
-        sViewsWithIds.put(R.id.divider, 14);
+        sViewsWithIds.put(R.id.accompaniment_options, 10);
+        sViewsWithIds.put(R.id.divider, 11);
     }
     // views
     @NonNull
@@ -36,38 +36,32 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     // Inverse Binding Event Handlers
 
     public FragmentAccompanimentMenuBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private FragmentAccompanimentMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (android.widget.RadioGroup) bindings[13]
-            , (android.widget.RadioButton) bindings[4]
-            , (android.widget.TextView) bindings[5]
-            , (android.widget.TextView) bindings[6]
-            , (android.widget.RadioButton) bindings[1]
+            , (android.widget.RadioGroup) bindings[10]
+            , (android.widget.CheckBox) bindings[3]
+            , (android.widget.TextView) bindings[4]
+            , (android.widget.CheckBox) bindings[1]
             , (android.widget.TextView) bindings[2]
-            , (android.widget.TextView) bindings[3]
-            , (android.widget.Button) bindings[11]
-            , (android.view.View) bindings[14]
-            , (android.widget.Button) bindings[12]
-            , (android.widget.RadioButton) bindings[7]
-            , (android.widget.TextView) bindings[8]
-            , (android.widget.TextView) bindings[9]
-            , (android.widget.TextView) bindings[10]
+            , (android.widget.Button) bindings[8]
+            , (android.view.View) bindings[11]
+            , (android.widget.Button) bindings[9]
+            , (android.widget.CheckBox) bindings[5]
+            , (android.widget.TextView) bindings[6]
+            , (android.widget.TextView) bindings[7]
             );
         this.berries.setTag(null);
         this.berriesDescription.setTag(null);
-        this.berriesPrice.setTag(null);
         this.bread.setTag(null);
         this.breadDescription.setTag(null);
-        this.breadPrice.setTag(null);
         this.cancelButton.setTag(null);
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.nextButton.setTag(null);
         this.pickles.setTag(null);
         this.picklesDescription.setTag(null);
-        this.picklesPrice.setTag(null);
         this.subtotal.setTag(null);
         setRootTag(root);
         // listeners
@@ -158,14 +152,11 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
         com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentMenuFragment = mAccompanimentMenuFragment;
         java.lang.String viewModelMenuItemsBerriesDescription = null;
-        java.lang.String viewModelMenuItemsPicklesGetFormattedPrice = null;
         java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
         java.util.Map<java.lang.String,com.example.lunchtray.model.MenuItem> viewModelMenuItems = null;
         java.lang.String viewModelSubtotalGetValue = null;
         java.lang.String viewModelMenuItemsBreadName = null;
         java.lang.String viewModelMenuItemsBreadDescription = null;
-        java.lang.String viewModelMenuItemsBerriesGetFormattedPrice = null;
-        java.lang.String viewModelMenuItemsBreadGetFormattedPrice = null;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsPickles = null;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsBerries = null;
         java.lang.String viewModelMenuItemsBerriesName = null;
@@ -215,12 +206,8 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
                         viewModelMenuItemsBreadName = viewModelMenuItemsBread.getName();
                         // read viewModel.menuItems["bread"].description
                         viewModelMenuItemsBreadDescription = viewModelMenuItemsBread.getDescription();
-                        // read viewModel.menuItems["bread"].getFormattedPrice()
-                        viewModelMenuItemsBreadGetFormattedPrice = viewModelMenuItemsBread.getFormattedPrice();
                     }
                     if (viewModelMenuItemsPickles != null) {
-                        // read viewModel.menuItems["pickles"].getFormattedPrice()
-                        viewModelMenuItemsPicklesGetFormattedPrice = viewModelMenuItemsPickles.getFormattedPrice();
                         // read viewModel.menuItems["pickles"].name
                         viewModelMenuItemsPicklesName = viewModelMenuItemsPickles.getName();
                         // read viewModel.menuItems["pickles"].description
@@ -229,8 +216,6 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
                     if (viewModelMenuItemsBerries != null) {
                         // read viewModel.menuItems["berries"].description
                         viewModelMenuItemsBerriesDescription = viewModelMenuItemsBerries.getDescription();
-                        // read viewModel.menuItems["berries"].getFormattedPrice()
-                        viewModelMenuItemsBerriesGetFormattedPrice = viewModelMenuItemsBerries.getFormattedPrice();
                         // read viewModel.menuItems["berries"].name
                         viewModelMenuItemsBerriesName = viewModelMenuItemsBerries.getName();
                     }
@@ -242,13 +227,10 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.berries, viewModelMenuItemsBerriesName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.berriesDescription, viewModelMenuItemsBerriesDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.berriesPrice, viewModelMenuItemsBerriesGetFormattedPrice);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bread, viewModelMenuItemsBreadName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.breadDescription, viewModelMenuItemsBreadDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.breadPrice, viewModelMenuItemsBreadGetFormattedPrice);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.pickles, viewModelMenuItemsPicklesName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.picklesDescription, viewModelMenuItemsPicklesDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.picklesPrice, viewModelMenuItemsPicklesGetFormattedPrice);
         }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1

@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,22 +24,10 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   public final Button cancelButton;
 
   @NonNull
-  public final RadioButton cauliflower;
-
-  @NonNull
-  public final TextView cauliflowerDescription;
-
-  @NonNull
-  public final TextView cauliflowerPrice;
-
-  @NonNull
-  public final RadioButton chili;
+  public final CheckBox chili;
 
   @NonNull
   public final TextView chiliDescription;
-
-  @NonNull
-  public final TextView chiliPrice;
 
   @NonNull
   public final View divider;
@@ -48,25 +36,25 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   public final RadioGroup entreeOptions;
 
   @NonNull
+  public final CheckBox khesed;
+
+  @NonNull
+  public final TextView khesedDescription;
+
+  @NonNull
   public final Button nextButton;
 
   @NonNull
-  public final RadioButton pasta;
+  public final CheckBox pasta;
 
   @NonNull
   public final TextView pastaDescription;
 
   @NonNull
-  public final TextView pastaPrice;
-
-  @NonNull
-  public final RadioButton skillet;
+  public final CheckBox skillet;
 
   @NonNull
   public final TextView skilletDescription;
-
-  @NonNull
-  public final TextView skilletPrice;
 
   @NonNull
   public final TextView subtotal;
@@ -78,28 +66,23 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   protected EntreeMenuFragment mEntreeMenuFragment;
 
   protected FragmentEntreeMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button cancelButton, RadioButton cauliflower, TextView cauliflowerDescription,
-      TextView cauliflowerPrice, RadioButton chili, TextView chiliDescription, TextView chiliPrice,
-      View divider, RadioGroup entreeOptions, Button nextButton, RadioButton pasta,
-      TextView pastaDescription, TextView pastaPrice, RadioButton skillet,
-      TextView skilletDescription, TextView skilletPrice, TextView subtotal) {
+      Button cancelButton, CheckBox chili, TextView chiliDescription, View divider,
+      RadioGroup entreeOptions, CheckBox khesed, TextView khesedDescription, Button nextButton,
+      CheckBox pasta, TextView pastaDescription, CheckBox skillet, TextView skilletDescription,
+      TextView subtotal) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cancelButton = cancelButton;
-    this.cauliflower = cauliflower;
-    this.cauliflowerDescription = cauliflowerDescription;
-    this.cauliflowerPrice = cauliflowerPrice;
     this.chili = chili;
     this.chiliDescription = chiliDescription;
-    this.chiliPrice = chiliPrice;
     this.divider = divider;
     this.entreeOptions = entreeOptions;
+    this.khesed = khesed;
+    this.khesedDescription = khesedDescription;
     this.nextButton = nextButton;
     this.pasta = pasta;
     this.pastaDescription = pastaDescription;
-    this.pastaPrice = pastaPrice;
     this.skillet = skillet;
     this.skilletDescription = skilletDescription;
-    this.skilletPrice = skilletPrice;
     this.subtotal = subtotal;
   }
 
