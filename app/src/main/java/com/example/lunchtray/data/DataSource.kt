@@ -13,77 +13,77 @@ object DataSource {
             name = "חֵסֵד",
             description = "Khesed; Steadfast Love",
             num = 1.0,
-            type = ItemType.ENTREE
+            type = ItemType.HEBREW
         ),
-        "chili" to
+        "elohim" to
         MenuItem(
             name = "אֱלהִים",
             description = "Elohim; God",
             num = 1.0,
-            type = ItemType.ENTREE
+            type = ItemType.HEBREW
         ),
-        "pasta" to
+        "tsedeq" to
         MenuItem(
             name = "צֶדֶק",
             description = "Tsedeq; Righteousness",
             num = 1.0,
-            type = ItemType.ENTREE
+            type = ItemType.HEBREW
         ),
-        "skillet" to
+        "kabad" to
         MenuItem(
             name = "כָּבַד",
             description = "Kabad; Weighty, Heavy, Glory",
             num = 1.0,
-            type = ItemType.ENTREE
+            type = ItemType.HEBREW
         ),
-        "salad" to
+        "kurios" to
         MenuItem(
             name = "κύριος",
             description = "Kurios; Lord, Master",
             num = 1.0,
-            type = ItemType.SIDE_DISH
+            type = ItemType.GREEK
         ),
-        "soup" to
+        "theopneustos" to
         MenuItem(
             name = "θεόπνευστος",
             description = "Theopneustos; God-Breathed",
             num = 1.0,
-            type = ItemType.SIDE_DISH
+            type = ItemType.GREEK
         ),
-        "potatoes" to
+        "dikaioo" to
         MenuItem(
             name = "δικαιόω",
             description = "Dikaioo; Justify, Declare Rightous",
             num = 1.0,
-            type = ItemType.SIDE_DISH
+            type = ItemType.GREEK
         ),
-        "rice" to
+        "hamartia" to
         MenuItem(
             name = "ἁμαρτία",
             description = "Hamartia; Sin, Failure",
             num = 1.0,
-            type = ItemType.SIDE_DISH
+            type = ItemType.GREEK
         ),
-        "bread" to
+        "fide" to
         MenuItem(
             name = "Fide",
             description = "Faith",
             num = 1.0,
-            type = ItemType.ACCOMPANIMENT
+            type = ItemType.LATIN
         ),
-        "berries" to
+        "gratia" to
         MenuItem(
             name = "Gratia",
             description = "Grace",
             num = 1.0,
-            type = ItemType.ACCOMPANIMENT
+            type = ItemType.LATIN
         ),
-        "pickles" to
+        "deus" to
         MenuItem(
             name = "Deus",
             description = "God",
             num = 1.0,
-            type = ItemType.ACCOMPANIMENT
+            type = ItemType.LATIN
         )
     )
 }

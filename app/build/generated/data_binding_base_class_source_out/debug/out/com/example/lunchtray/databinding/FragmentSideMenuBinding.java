@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,52 +24,40 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
   public final Button cancelButton;
 
   @NonNull
+  public final CheckBox dikaioo;
+
+  @NonNull
+  public final TextView dikaiooDescription;
+
+  @NonNull
   public final View divider;
+
+  @NonNull
+  public final CheckBox hamartia;
+
+  @NonNull
+  public final TextView hamartiaDescription;
+
+  @NonNull
+  public final CheckBox kurios;
+
+  @NonNull
+  public final TextView kuriosDescription;
 
   @NonNull
   public final Button nextButton;
 
   @NonNull
-  public final TextView potatoDescription;
-
-  @NonNull
-  public final TextView potatoPrice;
-
-  @NonNull
-  public final RadioButton potatoes;
-
-  @NonNull
-  public final RadioButton rice;
-
-  @NonNull
-  public final TextView riceDescription;
-
-  @NonNull
-  public final TextView ricePrice;
-
-  @NonNull
-  public final RadioButton salad;
-
-  @NonNull
-  public final TextView saladDescription;
-
-  @NonNull
-  public final TextView saladPrice;
-
-  @NonNull
   public final RadioGroup sideOptions;
 
   @NonNull
-  public final RadioButton soup;
-
-  @NonNull
-  public final TextView soupDescription;
-
-  @NonNull
-  public final TextView soupPrice;
-
-  @NonNull
   public final TextView subtotal;
+
+  @NonNull
+  public final CheckBox theopneustos;
+
+  @NonNull
+  public final TextView theopneustosDescription;
 
   @Bindable
   protected OrderViewModel mViewModel;
@@ -78,29 +66,24 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
   protected SideMenuFragment mSideMenuFragment;
 
   protected FragmentSideMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button cancelButton, View divider, Button nextButton, TextView potatoDescription,
-      TextView potatoPrice, RadioButton potatoes, RadioButton rice, TextView riceDescription,
-      TextView ricePrice, RadioButton salad, TextView saladDescription, TextView saladPrice,
-      RadioGroup sideOptions, RadioButton soup, TextView soupDescription, TextView soupPrice,
-      TextView subtotal) {
+      Button cancelButton, CheckBox dikaioo, TextView dikaiooDescription, View divider,
+      CheckBox hamartia, TextView hamartiaDescription, CheckBox kurios, TextView kuriosDescription,
+      Button nextButton, RadioGroup sideOptions, TextView subtotal, CheckBox theopneustos,
+      TextView theopneustosDescription) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cancelButton = cancelButton;
+    this.dikaioo = dikaioo;
+    this.dikaiooDescription = dikaiooDescription;
     this.divider = divider;
+    this.hamartia = hamartia;
+    this.hamartiaDescription = hamartiaDescription;
+    this.kurios = kurios;
+    this.kuriosDescription = kuriosDescription;
     this.nextButton = nextButton;
-    this.potatoDescription = potatoDescription;
-    this.potatoPrice = potatoPrice;
-    this.potatoes = potatoes;
-    this.rice = rice;
-    this.riceDescription = riceDescription;
-    this.ricePrice = ricePrice;
-    this.salad = salad;
-    this.saladDescription = saladDescription;
-    this.saladPrice = saladPrice;
     this.sideOptions = sideOptions;
-    this.soup = soup;
-    this.soupDescription = soupDescription;
-    this.soupPrice = soupPrice;
     this.subtotal = subtotal;
+    this.theopneustos = theopneustos;
+    this.theopneustosDescription = theopneustosDescription;
   }
 
   public abstract void setViewModel(@Nullable OrderViewModel viewModel);

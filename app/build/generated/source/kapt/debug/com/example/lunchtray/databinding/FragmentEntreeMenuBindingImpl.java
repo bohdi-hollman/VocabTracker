@@ -43,32 +43,32 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
     private FragmentEntreeMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.Button) bindings[10]
+            , (android.view.View) bindings[13]
             , (android.widget.CheckBox) bindings[3]
             , (android.widget.TextView) bindings[4]
-            , (android.view.View) bindings[13]
             , (android.widget.RadioGroup) bindings[12]
+            , (android.widget.CheckBox) bindings[7]
+            , (android.widget.TextView) bindings[8]
             , (android.widget.CheckBox) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.Button) bindings[11]
+            , (android.widget.TextView) bindings[9]
             , (android.widget.CheckBox) bindings[5]
             , (android.widget.TextView) bindings[6]
-            , (android.widget.CheckBox) bindings[7]
-            , (android.widget.TextView) bindings[8]
-            , (android.widget.TextView) bindings[9]
             );
         this.cancelButton.setTag(null);
-        this.chili.setTag(null);
-        this.chiliDescription.setTag(null);
+        this.elohim.setTag(null);
+        this.elohimDescription.setTag(null);
+        this.kabad.setTag(null);
+        this.kabadDescription.setTag(null);
         this.khesed.setTag(null);
         this.khesedDescription.setTag(null);
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.nextButton.setTag(null);
-        this.pasta.setTag(null);
-        this.pastaDescription.setTag(null);
-        this.skillet.setTag(null);
-        this.skilletDescription.setTag(null);
         this.subtotal.setTag(null);
+        this.tsedeq.setTag(null);
+        this.tsedeqDescription.setTag(null);
         setRootTag(root);
         // listeners
         mCallback17 = new com.example.lunchtray.generated.callback.OnClickListener(this, 4);
@@ -134,11 +134,11 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelCount((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelSubtotal, int fieldId) {
+    private boolean onChangeViewModelCount(androidx.lifecycle.LiveData<java.lang.String> ViewModelCount, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -155,44 +155,28 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
         java.lang.String viewModelMenuItemsKhesedDescription = null;
-        java.lang.String viewModelMenuItemsPastaDescription = null;
-        java.lang.String viewModelMenuItemsPastaName = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsPasta = null;
-        java.lang.String viewModelMenuItemsSkilletName = null;
-        java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
+        java.lang.String viewModelMenuItemsElohimName = null;
+        java.lang.String viewModelMenuItemsElohimDescription = null;
+        java.lang.String viewModelMenuItemsTsedeqDescription = null;
+        java.lang.String viewModelMenuItemsKabadDescription = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsKabad = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsTsedeq = null;
         java.util.Map<java.lang.String,com.example.lunchtray.model.MenuItem> viewModelMenuItems = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelCount = null;
         java.lang.String viewModelMenuItemsKhesedName = null;
-        java.lang.String viewModelSubtotalGetValue = null;
-        java.lang.String viewModelMenuItemsChiliName = null;
+        java.lang.String viewModelCountGetValue = null;
+        java.lang.String viewModelMenuItemsKabadName = null;
         com.example.lunchtray.ui.order.EntreeMenuFragment entreeMenuFragment = mEntreeMenuFragment;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsChili = null;
-        java.lang.String viewModelMenuItemsSkilletDescription = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsElohim = null;
+        java.lang.String subtotalAndroidStringSubtotalViewModelCount = null;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsKhesed = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsSkillet = null;
-        java.lang.String viewModelMenuItemsChiliDescription = null;
+        java.lang.String viewModelMenuItemsTsedeqName = null;
 
         if ((dirtyFlags & 0xdL) != 0) {
 
 
-
-                if (viewModel != null) {
-                    // read viewModel.subtotal
-                    viewModelSubtotal = viewModel.getSubtotal();
-                }
-                updateLiveDataRegistration(0, viewModelSubtotal);
-
-
-                if (viewModelSubtotal != null) {
-                    // read viewModel.subtotal.getValue()
-                    viewModelSubtotalGetValue = viewModelSubtotal.getValue();
-                }
-
-
-                // read @android:string/subtotal
-                subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
             if ((dirtyFlags & 0xcL) != 0) {
 
                     if (viewModel != null) {
@@ -202,28 +186,34 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
 
 
                     if (viewModelMenuItems != null) {
-                        // read viewModel.menuItems["pasta"]
-                        viewModelMenuItemsPasta = viewModelMenuItems.get("pasta");
-                        // read viewModel.menuItems["chili"]
-                        viewModelMenuItemsChili = viewModelMenuItems.get("chili");
+                        // read viewModel.menuItems["kabad"]
+                        viewModelMenuItemsKabad = viewModelMenuItems.get("kabad");
+                        // read viewModel.menuItems["tsedeq"]
+                        viewModelMenuItemsTsedeq = viewModelMenuItems.get("tsedeq");
+                        // read viewModel.menuItems["elohim"]
+                        viewModelMenuItemsElohim = viewModelMenuItems.get("elohim");
                         // read viewModel.menuItems["khesed"]
                         viewModelMenuItemsKhesed = viewModelMenuItems.get("khesed");
-                        // read viewModel.menuItems["skillet"]
-                        viewModelMenuItemsSkillet = viewModelMenuItems.get("skillet");
                     }
 
 
-                    if (viewModelMenuItemsPasta != null) {
-                        // read viewModel.menuItems["pasta"].description
-                        viewModelMenuItemsPastaDescription = viewModelMenuItemsPasta.getDescription();
-                        // read viewModel.menuItems["pasta"].name
-                        viewModelMenuItemsPastaName = viewModelMenuItemsPasta.getName();
+                    if (viewModelMenuItemsKabad != null) {
+                        // read viewModel.menuItems["kabad"].description
+                        viewModelMenuItemsKabadDescription = viewModelMenuItemsKabad.getDescription();
+                        // read viewModel.menuItems["kabad"].name
+                        viewModelMenuItemsKabadName = viewModelMenuItemsKabad.getName();
                     }
-                    if (viewModelMenuItemsChili != null) {
-                        // read viewModel.menuItems["chili"].name
-                        viewModelMenuItemsChiliName = viewModelMenuItemsChili.getName();
-                        // read viewModel.menuItems["chili"].description
-                        viewModelMenuItemsChiliDescription = viewModelMenuItemsChili.getDescription();
+                    if (viewModelMenuItemsTsedeq != null) {
+                        // read viewModel.menuItems["tsedeq"].description
+                        viewModelMenuItemsTsedeqDescription = viewModelMenuItemsTsedeq.getDescription();
+                        // read viewModel.menuItems["tsedeq"].name
+                        viewModelMenuItemsTsedeqName = viewModelMenuItemsTsedeq.getName();
+                    }
+                    if (viewModelMenuItemsElohim != null) {
+                        // read viewModel.menuItems["elohim"].name
+                        viewModelMenuItemsElohimName = viewModelMenuItemsElohim.getName();
+                        // read viewModel.menuItems["elohim"].description
+                        viewModelMenuItemsElohimDescription = viewModelMenuItemsElohim.getDescription();
                     }
                     if (viewModelMenuItemsKhesed != null) {
                         // read viewModel.menuItems["khesed"].description
@@ -231,41 +221,51 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
                         // read viewModel.menuItems["khesed"].name
                         viewModelMenuItemsKhesedName = viewModelMenuItemsKhesed.getName();
                     }
-                    if (viewModelMenuItemsSkillet != null) {
-                        // read viewModel.menuItems["skillet"].name
-                        viewModelMenuItemsSkilletName = viewModelMenuItemsSkillet.getName();
-                        // read viewModel.menuItems["skillet"].description
-                        viewModelMenuItemsSkilletDescription = viewModelMenuItemsSkillet.getDescription();
-                    }
             }
+
+                if (viewModel != null) {
+                    // read viewModel.count
+                    viewModelCount = viewModel.getCount();
+                }
+                updateLiveDataRegistration(0, viewModelCount);
+
+
+                if (viewModelCount != null) {
+                    // read viewModel.count.getValue()
+                    viewModelCountGetValue = viewModelCount.getValue();
+                }
+
+
+                // read @android:string/subtotal
+                subtotalAndroidStringSubtotalViewModelCount = subtotal.getResources().getString(R.string.subtotal, viewModelCountGetValue);
         }
         // batch finished
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
             this.cancelButton.setOnClickListener(mCallback18);
-            this.chili.setOnClickListener(mCallback15);
+            this.elohim.setOnClickListener(mCallback15);
+            this.kabad.setOnClickListener(mCallback17);
             this.khesed.setOnClickListener(mCallback14);
             this.nextButton.setOnClickListener(mCallback19);
-            this.pasta.setOnClickListener(mCallback16);
-            this.skillet.setOnClickListener(mCallback17);
+            this.tsedeq.setOnClickListener(mCallback16);
         }
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.chili, viewModelMenuItemsChiliName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.chiliDescription, viewModelMenuItemsChiliDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.elohim, viewModelMenuItemsElohimName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.elohimDescription, viewModelMenuItemsElohimDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.kabad, viewModelMenuItemsKabadName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.kabadDescription, viewModelMenuItemsKabadDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.khesed, viewModelMenuItemsKhesedName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.khesedDescription, viewModelMenuItemsKhesedDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.pasta, viewModelMenuItemsPastaName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.pastaDescription, viewModelMenuItemsPastaDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.skillet, viewModelMenuItemsSkilletName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.skilletDescription, viewModelMenuItemsSkilletDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tsedeq, viewModelMenuItemsTsedeqName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tsedeqDescription, viewModelMenuItemsTsedeqDescription);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelCount);
         }
     }
     // Listener Stub Implementations
@@ -286,7 +286,7 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
 
 
 
-                    viewModel.setEntree("skillet");
+                    viewModel.setHebrew("kabad");
                 }
                 break;
             }
@@ -304,7 +304,7 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
 
 
 
-                    viewModel.setEntree("chili");
+                    viewModel.setHebrew("elohim");
                 }
                 break;
             }
@@ -339,7 +339,7 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
 
 
 
-                    viewModel.setEntree("pasta");
+                    viewModel.setHebrew("tsedeq");
                 }
                 break;
             }
@@ -357,7 +357,7 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
 
 
 
-                    viewModel.setEntree("khesed");
+                    viewModel.setHebrew("khesed");
                 }
                 break;
             }
@@ -383,7 +383,7 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.subtotal
+        flag 0 (0x1L): viewModel.count
         flag 1 (0x2L): entreeMenuFragment
         flag 2 (0x3L): viewModel
         flag 3 (0x4L): null

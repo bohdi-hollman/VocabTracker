@@ -43,32 +43,32 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     private FragmentSideMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.Button) bindings[10]
-            , (android.view.View) bindings[13]
-            , (android.widget.Button) bindings[11]
-            , (android.widget.TextView) bindings[6]
             , (android.widget.CheckBox) bindings[5]
+            , (android.widget.TextView) bindings[6]
+            , (android.view.View) bindings[13]
             , (android.widget.CheckBox) bindings[7]
             , (android.widget.TextView) bindings[8]
             , (android.widget.CheckBox) bindings[1]
             , (android.widget.TextView) bindings[2]
+            , (android.widget.Button) bindings[11]
             , (android.widget.RadioGroup) bindings[12]
+            , (android.widget.TextView) bindings[9]
             , (android.widget.CheckBox) bindings[3]
             , (android.widget.TextView) bindings[4]
-            , (android.widget.TextView) bindings[9]
             );
         this.cancelButton.setTag(null);
+        this.dikaioo.setTag(null);
+        this.dikaiooDescription.setTag(null);
+        this.hamartia.setTag(null);
+        this.hamartiaDescription.setTag(null);
+        this.kurios.setTag(null);
+        this.kuriosDescription.setTag(null);
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.nextButton.setTag(null);
-        this.potatoDescription.setTag(null);
-        this.potatoes.setTag(null);
-        this.rice.setTag(null);
-        this.riceDescription.setTag(null);
-        this.salad.setTag(null);
-        this.saladDescription.setTag(null);
-        this.soup.setTag(null);
-        this.soupDescription.setTag(null);
         this.subtotal.setTag(null);
+        this.theopneustos.setTag(null);
+        this.theopneustosDescription.setTag(null);
         setRootTag(root);
         // listeners
         mCallback13 = new com.example.lunchtray.generated.callback.OnClickListener(this, 6);
@@ -134,11 +134,11 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelCount((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelSubtotal, int fieldId) {
+    private boolean onChangeViewModelCount(androidx.lifecycle.LiveData<java.lang.String> ViewModelCount, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -155,44 +155,28 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
-        java.lang.String viewModelMenuItemsSoupName = null;
+        java.lang.String viewModelMenuItemsKuriosName = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsTheopneustos = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsKurios = null;
+        java.lang.String viewModelMenuItemsHamartiaName = null;
         com.example.lunchtray.ui.order.SideMenuFragment sideMenuFragment = mSideMenuFragment;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsSalad = null;
-        java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
+        java.lang.String viewModelMenuItemsTheopneustosName = null;
+        java.lang.String viewModelMenuItemsDikaiooName = null;
+        java.lang.String viewModelMenuItemsHamartiaDescription = null;
         java.util.Map<java.lang.String,com.example.lunchtray.model.MenuItem> viewModelMenuItems = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsSoup = null;
-        java.lang.String viewModelMenuItemsRiceDescription = null;
-        java.lang.String viewModelMenuItemsRiceName = null;
-        java.lang.String viewModelMenuItemsPotatoesDescription = null;
-        java.lang.String viewModelSubtotalGetValue = null;
-        java.lang.String viewModelMenuItemsSoupDescription = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsRice = null;
-        java.lang.String viewModelMenuItemsSaladDescription = null;
-        java.lang.String viewModelMenuItemsSaladName = null;
-        java.lang.String viewModelMenuItemsPotatoesName = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsPotatoes = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelCount = null;
+        java.lang.String viewModelMenuItemsDikaiooDescription = null;
+        java.lang.String viewModelMenuItemsKuriosDescription = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsHamartia = null;
+        java.lang.String viewModelCountGetValue = null;
+        java.lang.String viewModelMenuItemsTheopneustosDescription = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsDikaioo = null;
+        java.lang.String subtotalAndroidStringSubtotalViewModelCount = null;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0xdL) != 0) {
 
 
-
-                if (viewModel != null) {
-                    // read viewModel.subtotal
-                    viewModelSubtotal = viewModel.getSubtotal();
-                }
-                updateLiveDataRegistration(0, viewModelSubtotal);
-
-
-                if (viewModelSubtotal != null) {
-                    // read viewModel.subtotal.getValue()
-                    viewModelSubtotalGetValue = viewModelSubtotal.getValue();
-                }
-
-
-                // read @android:string/subtotal
-                subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
             if ((dirtyFlags & 0xcL) != 0) {
 
                     if (viewModel != null) {
@@ -202,70 +186,86 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
 
 
                     if (viewModelMenuItems != null) {
-                        // read viewModel.menuItems["salad"]
-                        viewModelMenuItemsSalad = viewModelMenuItems.get("salad");
-                        // read viewModel.menuItems["soup"]
-                        viewModelMenuItemsSoup = viewModelMenuItems.get("soup");
-                        // read viewModel.menuItems["rice"]
-                        viewModelMenuItemsRice = viewModelMenuItems.get("rice");
-                        // read viewModel.menuItems["potatoes"]
-                        viewModelMenuItemsPotatoes = viewModelMenuItems.get("potatoes");
+                        // read viewModel.menuItems["theopneustos"]
+                        viewModelMenuItemsTheopneustos = viewModelMenuItems.get("theopneustos");
+                        // read viewModel.menuItems["kurios"]
+                        viewModelMenuItemsKurios = viewModelMenuItems.get("kurios");
+                        // read viewModel.menuItems["hamartia"]
+                        viewModelMenuItemsHamartia = viewModelMenuItems.get("hamartia");
+                        // read viewModel.menuItems["dikaioo"]
+                        viewModelMenuItemsDikaioo = viewModelMenuItems.get("dikaioo");
                     }
 
 
-                    if (viewModelMenuItemsSalad != null) {
-                        // read viewModel.menuItems["salad"].description
-                        viewModelMenuItemsSaladDescription = viewModelMenuItemsSalad.getDescription();
-                        // read viewModel.menuItems["salad"].name
-                        viewModelMenuItemsSaladName = viewModelMenuItemsSalad.getName();
+                    if (viewModelMenuItemsTheopneustos != null) {
+                        // read viewModel.menuItems["theopneustos"].name
+                        viewModelMenuItemsTheopneustosName = viewModelMenuItemsTheopneustos.getName();
+                        // read viewModel.menuItems["theopneustos"].description
+                        viewModelMenuItemsTheopneustosDescription = viewModelMenuItemsTheopneustos.getDescription();
                     }
-                    if (viewModelMenuItemsSoup != null) {
-                        // read viewModel.menuItems["soup"].name
-                        viewModelMenuItemsSoupName = viewModelMenuItemsSoup.getName();
-                        // read viewModel.menuItems["soup"].description
-                        viewModelMenuItemsSoupDescription = viewModelMenuItemsSoup.getDescription();
+                    if (viewModelMenuItemsKurios != null) {
+                        // read viewModel.menuItems["kurios"].name
+                        viewModelMenuItemsKuriosName = viewModelMenuItemsKurios.getName();
+                        // read viewModel.menuItems["kurios"].description
+                        viewModelMenuItemsKuriosDescription = viewModelMenuItemsKurios.getDescription();
                     }
-                    if (viewModelMenuItemsRice != null) {
-                        // read viewModel.menuItems["rice"].description
-                        viewModelMenuItemsRiceDescription = viewModelMenuItemsRice.getDescription();
-                        // read viewModel.menuItems["rice"].name
-                        viewModelMenuItemsRiceName = viewModelMenuItemsRice.getName();
+                    if (viewModelMenuItemsHamartia != null) {
+                        // read viewModel.menuItems["hamartia"].name
+                        viewModelMenuItemsHamartiaName = viewModelMenuItemsHamartia.getName();
+                        // read viewModel.menuItems["hamartia"].description
+                        viewModelMenuItemsHamartiaDescription = viewModelMenuItemsHamartia.getDescription();
                     }
-                    if (viewModelMenuItemsPotatoes != null) {
-                        // read viewModel.menuItems["potatoes"].description
-                        viewModelMenuItemsPotatoesDescription = viewModelMenuItemsPotatoes.getDescription();
-                        // read viewModel.menuItems["potatoes"].name
-                        viewModelMenuItemsPotatoesName = viewModelMenuItemsPotatoes.getName();
+                    if (viewModelMenuItemsDikaioo != null) {
+                        // read viewModel.menuItems["dikaioo"].name
+                        viewModelMenuItemsDikaiooName = viewModelMenuItemsDikaioo.getName();
+                        // read viewModel.menuItems["dikaioo"].description
+                        viewModelMenuItemsDikaiooDescription = viewModelMenuItemsDikaioo.getDescription();
                     }
             }
+
+                if (viewModel != null) {
+                    // read viewModel.count
+                    viewModelCount = viewModel.getCount();
+                }
+                updateLiveDataRegistration(0, viewModelCount);
+
+
+                if (viewModelCount != null) {
+                    // read viewModel.count.getValue()
+                    viewModelCountGetValue = viewModelCount.getValue();
+                }
+
+
+                // read @android:string/subtotal
+                subtotalAndroidStringSubtotalViewModelCount = subtotal.getResources().getString(R.string.subtotal, viewModelCountGetValue);
         }
         // batch finished
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
             this.cancelButton.setOnClickListener(mCallback12);
+            this.dikaioo.setOnClickListener(mCallback10);
+            this.hamartia.setOnClickListener(mCallback11);
+            this.kurios.setOnClickListener(mCallback8);
             this.nextButton.setOnClickListener(mCallback13);
-            this.potatoes.setOnClickListener(mCallback10);
-            this.rice.setOnClickListener(mCallback11);
-            this.salad.setOnClickListener(mCallback8);
-            this.soup.setOnClickListener(mCallback9);
+            this.theopneustos.setOnClickListener(mCallback9);
         }
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.potatoDescription, viewModelMenuItemsPotatoesDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.potatoes, viewModelMenuItemsPotatoesName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.rice, viewModelMenuItemsRiceName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.riceDescription, viewModelMenuItemsRiceDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.salad, viewModelMenuItemsSaladName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.saladDescription, viewModelMenuItemsSaladDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.soup, viewModelMenuItemsSoupName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.soupDescription, viewModelMenuItemsSoupDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.dikaioo, viewModelMenuItemsDikaiooName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.dikaiooDescription, viewModelMenuItemsDikaiooDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.hamartia, viewModelMenuItemsHamartiaName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.hamartiaDescription, viewModelMenuItemsHamartiaDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.kurios, viewModelMenuItemsKuriosName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.kuriosDescription, viewModelMenuItemsKuriosDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.theopneustos, viewModelMenuItemsTheopneustosName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.theopneustosDescription, viewModelMenuItemsTheopneustosDescription);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelCount);
         }
     }
     // Listener Stub Implementations
@@ -303,7 +303,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
 
 
 
-                    viewModel.setSide("rice");
+                    viewModel.setGreek("hamartia");
                 }
                 break;
             }
@@ -321,7 +321,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
 
 
 
-                    viewModel.setSide("salad");
+                    viewModel.setGreek("kurios");
                 }
                 break;
             }
@@ -356,7 +356,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
 
 
 
-                    viewModel.setSide("potatoes");
+                    viewModel.setGreek("dikaioo");
                 }
                 break;
             }
@@ -374,7 +374,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
 
 
 
-                    viewModel.setSide("soup");
+                    viewModel.setGreek("theopneustos");
                 }
                 break;
             }
@@ -383,7 +383,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.subtotal
+        flag 0 (0x1L): viewModel.count
         flag 1 (0x2L): sideMenuFragment
         flag 2 (0x3L): viewModel
         flag 3 (0x4L): null

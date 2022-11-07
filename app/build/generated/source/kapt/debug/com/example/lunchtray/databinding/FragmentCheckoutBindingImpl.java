@@ -108,15 +108,15 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelCount((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
             case 1 :
-                return onChangeViewModelTotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelTotcount((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
             case 2 :
-                return onChangeViewModelTax((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelPercent((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelSubtotal, int fieldId) {
+    private boolean onChangeViewModelCount(androidx.lifecycle.LiveData<java.lang.String> ViewModelCount, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -125,7 +125,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeViewModelTotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelTotal, int fieldId) {
+    private boolean onChangeViewModelTotcount(androidx.lifecycle.LiveData<java.lang.String> ViewModelTotcount, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -134,7 +134,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeViewModelTax(androidx.lifecycle.LiveData<java.lang.String> ViewModelTax, int fieldId) {
+    private boolean onChangeViewModelPercent(androidx.lifecycle.LiveData<java.lang.String> ViewModelPercent, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -151,17 +151,17 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
-        java.lang.String totalAndroidStringTotalViewModelTotal = null;
-        java.lang.String viewModelSubtotalGetValue = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelCount = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelTotcount = null;
+        java.lang.String taxAndroidStringTaxViewModelTotcount = null;
         com.example.lunchtray.ui.order.CheckoutFragment checkoutFragment = mCheckoutFragment;
-        java.lang.String taxAndroidStringTaxViewModelTax = null;
-        androidx.lifecycle.LiveData<java.lang.String> viewModelTotal = null;
-        java.lang.String viewModelTotalGetValue = null;
+        java.lang.String viewModelCountGetValue = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelPercent = null;
+        java.lang.String viewModelPercentGetValue = null;
+        java.lang.String subtotalAndroidStringSubtotalViewModelCount = null;
+        java.lang.String totalAndroidStringTotalViewModelPercent = null;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
-        androidx.lifecycle.LiveData<java.lang.String> viewModelTax = null;
-        java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
-        java.lang.String viewModelTaxGetValue = null;
+        java.lang.String viewModelTotcountGetValue = null;
 
         if ((dirtyFlags & 0x37L) != 0) {
 
@@ -169,56 +169,56 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
             if ((dirtyFlags & 0x31L) != 0) {
 
                     if (viewModel != null) {
-                        // read viewModel.subtotal
-                        viewModelSubtotal = viewModel.getSubtotal();
+                        // read viewModel.count
+                        viewModelCount = viewModel.getCount();
                     }
-                    updateLiveDataRegistration(0, viewModelSubtotal);
+                    updateLiveDataRegistration(0, viewModelCount);
 
 
-                    if (viewModelSubtotal != null) {
-                        // read viewModel.subtotal.getValue()
-                        viewModelSubtotalGetValue = viewModelSubtotal.getValue();
+                    if (viewModelCount != null) {
+                        // read viewModel.count.getValue()
+                        viewModelCountGetValue = viewModelCount.getValue();
                     }
 
 
                     // read @android:string/subtotal
-                    subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
+                    subtotalAndroidStringSubtotalViewModelCount = subtotal.getResources().getString(R.string.subtotal, viewModelCountGetValue);
             }
             if ((dirtyFlags & 0x32L) != 0) {
 
                     if (viewModel != null) {
-                        // read viewModel.total
-                        viewModelTotal = viewModel.getTotal();
+                        // read viewModel.totcount
+                        viewModelTotcount = viewModel.getTotcount();
                     }
-                    updateLiveDataRegistration(1, viewModelTotal);
+                    updateLiveDataRegistration(1, viewModelTotcount);
 
 
-                    if (viewModelTotal != null) {
-                        // read viewModel.total.getValue()
-                        viewModelTotalGetValue = viewModelTotal.getValue();
-                    }
-
-
-                    // read @android:string/total
-                    totalAndroidStringTotalViewModelTotal = total.getResources().getString(R.string.total, viewModelTotalGetValue);
-            }
-            if ((dirtyFlags & 0x34L) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.tax
-                        viewModelTax = viewModel.getTax();
-                    }
-                    updateLiveDataRegistration(2, viewModelTax);
-
-
-                    if (viewModelTax != null) {
-                        // read viewModel.tax.getValue()
-                        viewModelTaxGetValue = viewModelTax.getValue();
+                    if (viewModelTotcount != null) {
+                        // read viewModel.totcount.getValue()
+                        viewModelTotcountGetValue = viewModelTotcount.getValue();
                     }
 
 
                     // read @android:string/tax
-                    taxAndroidStringTaxViewModelTax = tax.getResources().getString(R.string.tax, viewModelTaxGetValue);
+                    taxAndroidStringTaxViewModelTotcount = tax.getResources().getString(R.string.tax, viewModelTotcountGetValue);
+            }
+            if ((dirtyFlags & 0x34L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.percent
+                        viewModelPercent = viewModel.getPercent();
+                    }
+                    updateLiveDataRegistration(2, viewModelPercent);
+
+
+                    if (viewModelPercent != null) {
+                        // read viewModel.percent.getValue()
+                        viewModelPercentGetValue = viewModelPercent.getValue();
+                    }
+
+
+                    // read @android:string/total
+                    totalAndroidStringTotalViewModelPercent = total.getResources().getString(R.string.total, viewModelPercentGetValue);
             }
         }
         // batch finished
@@ -231,17 +231,17 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
-        }
-        if ((dirtyFlags & 0x34L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tax, taxAndroidStringTaxViewModelTax);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelCount);
         }
         if ((dirtyFlags & 0x32L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.total, totalAndroidStringTotalViewModelTotal);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tax, taxAndroidStringTaxViewModelTotcount);
+        }
+        if ((dirtyFlags & 0x34L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.total, totalAndroidStringTotalViewModelPercent);
         }
     }
     // Listener Stub Implementations
@@ -287,9 +287,9 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.subtotal
-        flag 1 (0x2L): viewModel.total
-        flag 2 (0x3L): viewModel.tax
+        flag 0 (0x1L): viewModel.count
+        flag 1 (0x2L): viewModel.totcount
+        flag 2 (0x3L): viewModel.percent
         flag 3 (0x4L): checkoutFragment
         flag 4 (0x5L): viewModel
         flag 5 (0x6L): null

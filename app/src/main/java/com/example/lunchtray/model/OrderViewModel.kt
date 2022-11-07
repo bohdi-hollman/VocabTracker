@@ -28,164 +28,123 @@ class OrderViewModel : ViewModel() {
     val menuItems = DataSource.menuItems
 
     // Default values for item prices
-    private var previousEntreePrice = 0.0
-    private var previousSidePrice = 0.0
-    private var previousAccompanimentPrice = 0.0
+    private var previousHebrewNum = 0.0
+    private var previousGreekNum = 0.0
+    private var previousLatinNum = 0.0
 
-    // Default tax rate
-    private val taxRate = 10
+    // Default totcountact
+    private val totcountact = 10.00
 
-    // Entree for the order
-    private val _entree = MutableLiveData<MenuItem?>()
-    val entree: LiveData<MenuItem?> = _entree
+    // hebrew for the order
+    private val _hebrew = MutableLiveData<MenuItem?>()
+    val hebrew: LiveData<MenuItem?> = _hebrew
 
-    // Side for the order
-    private val _side = MutableLiveData<MenuItem?>()
-    val side: LiveData<MenuItem?> = _side
+    // greek for the order
+    private val _greek = MutableLiveData<MenuItem?>()
+    val greek: LiveData<MenuItem?> = _greek
 
-    // Accompaniment for the order.
-    private val _accompaniment = MutableLiveData<MenuItem?>()
-    val accompaniment: LiveData<MenuItem?> = _accompaniment
+    // latin for the order.
+    private val _latin = MutableLiveData<MenuItem?>()
+    val latin: LiveData<MenuItem?> = _latin
 
-    // Subtotal for the order
-    private val _subtotal = MutableLiveData(0.0)
-    val subtotal: LiveData<String> = Transformations.map(_subtotal) {
-        NumberFormat.getCurrencyInstance().format(it)
+    // count for the order
+    private val _count = MutableLiveData(0.0)
+    val count: LiveData<String> = Transformations.map(_count) {
+        NumberFormat.getNumberInstance().format(it)
     }
 
-    // Total cost of the order
-    private val _total = MutableLiveData(0.0)
-    val total: LiveData<String> = Transformations.map(_total) {
-        NumberFormat.getCurrencyInstance().format(it)
+    // percent cost of the order
+    private val _percent = MutableLiveData(0.0)
+    val percent: LiveData<String> = Transformations.map(_percent) {
+        NumberFormat.getPercentInstance().format(it)
     }
 
-    // Tax for the order
-    private val _tax = MutableLiveData(0.0)
-    val tax: LiveData<String> = Transformations.map(_tax) {
-        NumberFormat.getCurrencyInstance().format(it)
+    // totcount for the order
+    private val _totcount = MutableLiveData(0.0)
+    val totcount: LiveData<String> = Transformations.map(_totcount) {
+        NumberFormat.getNumberInstance().format(it)
     }
 
     /**
-     * Set the entree for the order.
+     * Set the hebrew for the order.
      */
-    fun setEntree(entree: String) {
-        // TODO: if _entree.value is not null, set the previous entree num
-        //  to the current
-        //  entree num
-        //  .
-        // TODO: if _subtotal.value is not null subtract the previous entree num
-        //  from the current
-        //  subtotal value. This ensures that we only charge for the currently selected entree.
-        // TODO: set the current entree value to the menu item corresponding to the passed in string
-        // TODO: update the subtotal to reflect the num
-        //  of the selected entree.
+    fun setHebrew(hebrew: String) {
 
-        if(_entree.value != null) {
-            previousEntreePrice = _entree.value!!.num
+        if(_hebrew.value != null) {
+            previousHebrewNum= _hebrew.value!!.num
 
         }
 
-        _entree.value = menuItems.get(entree)
-        updateSubtotal(_entree.value!!.num
+        _hebrew.value = menuItems.get(hebrew)
+        updateCount(_hebrew.value!!.num
         )
     }
 
     /**
-     * Set the side for the order.
+     * Set the greek for the order.
      */
-    fun setSide(side: String) {
-        // TODO: if _side.value is not null, set the previous side num
-        //  to the current side num
-        //  .
-        // TODO: if _subtotal.value is not null subtract the previous side num
-        //  from the current
-        //  subtotal value. This ensures that we only charge for the currently selected side.
+    fun setGreek(greek: String) {
 
-        // TODO: set the current side value to the menu item corresponding to the passed in string
-        // TODO: update the subtotal to reflect the num
-        //  of the selected side.
 
-        if (_side.value != null){
-            previousSidePrice = _side.value!!.num
+        if (_greek.value != null){
+            previousGreekNum= _greek.value!!.num
 
         }
 
-        _side.value = menuItems.get(side)
-        updateSubtotal(_side.value!!.num
+        _greek.value = menuItems.get(greek)
+        updateCount(_greek.value!!.num
         )
     }
 
     /**
-     * Set the accompaniment for the order.
+     * Set the latin for the order.
      */
-    fun setAccompaniment(accompaniment: String) {
-        // TODO: if _accompaniment.value is not null, set the previous accompaniment num
-        //  to the
-        //  current accompaniment num
-        //  .
+    fun setLatin(latin: String) {
 
-        // TODO: if _accompaniment.value is not null subtract the previous accompaniment num
-        //  from
-        //  the current subtotal value. This ensures that we only charge for the currently selected
-        //  accompaniment.
 
-        // TODO: set the current accompaniment value to the menu item corresponding to the passed in
-        //  string
-        // TODO: update the subtotal to reflect the num
-        //  of the selected accompaniment.
-
-        if (_accompaniment.value != null){
-            previousAccompanimentPrice = _accompaniment.value!!.num
+        if (_latin.value != null){
+            previousLatinNum = _latin.value!!.num
 
         }
 
-        _accompaniment.value = menuItems.get(accompaniment)
-        updateSubtotal(_accompaniment.value!!.num
+        _latin.value = menuItems.get(latin)
+        updateCount(_latin.value!!.num
         )
     }
 
     /**
-     * Update subtotal value.
+     * Update count value.
      */
-    private fun updateSubtotal(itemNum: Double) {
+    private fun updateCount(itemNum: Double) {
 
-        // TODO: if _subtotal.value is not null, update it to reflect the num
-        //  of the recently
-        //  added item.
-        //  Otherwise, set _subtotal.value to equal the num
-        //  of the item.
-        // TODO: calculate the tax and resulting total
-        if (_subtotal.value != null){
-            _subtotal.value = (_subtotal.value)?.plus(itemNum)
+        if (_count.value != null){
+            _count.value = (_count.value)?.plus(itemNum)
         }else{
-            _subtotal.value = itemNum
+            _count.value = itemNum
         }
         calculatePercent()
     }
 
     /**
-     * Calculate tax and update total.
+     * Calculate totcount and update percent.
      */
     fun calculatePercent() {
-        // TODO: set _tax.value based on the subtotal and the tax rate.
-        // TODO: set the total based on the subtotal and _tax.value.
-        _total.value = (_subtotal.value)?.div(_tax.value!!)
+        _percent.value = (_count.value)?.div(totcountact!!)
     }
 
     /**
      * Reset all values pertaining to the order.
      */
     fun resetOrder() {
-        // TODO: Reset all values associated with an order
 
-        previousEntreePrice = 0.0
-        previousSidePrice = 0.0
-        previousAccompanimentPrice = 0.0
-        _entree.value = null
-        _side.value = null
-        _accompaniment.value = null
-        _subtotal.value = 0.0
-        _total.value = 0.0
-        _tax.value = 0.0
+        previousHebrewNum= 0.0
+        previousGreekNum= 0.0
+        previousLatinNum = 0.0
+        _hebrew.value = null
+        _greek.value = null
+        _latin.value = null
+        _count.value = 0.0
+        _percent.value = 0.0
+        _totcount.value = 0.0
     }
 }

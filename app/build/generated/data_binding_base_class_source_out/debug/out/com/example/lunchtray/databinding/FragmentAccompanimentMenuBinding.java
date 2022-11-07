@@ -24,31 +24,31 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   public final RadioGroup accompanimentOptions;
 
   @NonNull
-  public final CheckBox berries;
-
-  @NonNull
-  public final TextView berriesDescription;
-
-  @NonNull
-  public final CheckBox bread;
-
-  @NonNull
-  public final TextView breadDescription;
-
-  @NonNull
   public final Button cancelButton;
+
+  @NonNull
+  public final CheckBox deus;
+
+  @NonNull
+  public final TextView deusDescription;
 
   @NonNull
   public final View divider;
 
   @NonNull
+  public final CheckBox fide;
+
+  @NonNull
+  public final TextView fideDescription;
+
+  @NonNull
+  public final CheckBox gratia;
+
+  @NonNull
+  public final TextView gratiaDescription;
+
+  @NonNull
   public final Button nextButton;
-
-  @NonNull
-  public final CheckBox pickles;
-
-  @NonNull
-  public final TextView picklesDescription;
 
   @NonNull
   public final TextView subtotal;
@@ -60,21 +60,20 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   protected AccompanimentMenuFragment mAccompanimentMenuFragment;
 
   protected FragmentAccompanimentMenuBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, RadioGroup accompanimentOptions, CheckBox berries,
-      TextView berriesDescription, CheckBox bread, TextView breadDescription, Button cancelButton,
-      View divider, Button nextButton, CheckBox pickles, TextView picklesDescription,
-      TextView subtotal) {
+      int _localFieldCount, RadioGroup accompanimentOptions, Button cancelButton, CheckBox deus,
+      TextView deusDescription, View divider, CheckBox fide, TextView fideDescription,
+      CheckBox gratia, TextView gratiaDescription, Button nextButton, TextView subtotal) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accompanimentOptions = accompanimentOptions;
-    this.berries = berries;
-    this.berriesDescription = berriesDescription;
-    this.bread = bread;
-    this.breadDescription = breadDescription;
     this.cancelButton = cancelButton;
+    this.deus = deus;
+    this.deusDescription = deusDescription;
     this.divider = divider;
+    this.fide = fide;
+    this.fideDescription = fideDescription;
+    this.gratia = gratia;
+    this.gratiaDescription = gratiaDescription;
     this.nextButton = nextButton;
-    this.pickles = pickles;
-    this.picklesDescription = picklesDescription;
     this.subtotal = subtotal;
   }
 

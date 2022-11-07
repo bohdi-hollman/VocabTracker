@@ -2,32 +2,32 @@ package com.example.lunchtray.model;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0006\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\f\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0006\u0010%\u001a\u00020&J\u0006\u0010\'\u001a\u00020&J\u000e\u0010(\u001a\u00020&2\u0006\u0010\r\u001a\u00020\u0015J\u000e\u0010)\u001a\u00020&2\u0006\u0010\u0011\u001a\u00020\u0015J\u000e\u0010*\u001a\u00020&2\u0006\u0010\u001b\u001a\u00020\u0015J\u0010\u0010+\u001a\u00020&2\u0006\u0010,\u001a\u00020\tH\u0002R\u0016\u0010\u0003\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0006\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0007\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\b\u001a\u0010\u0012\f\u0012\n \n*\u0004\u0018\u00010\t0\t0\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u000b\u001a\u0010\u0012\f\u0012\n \n*\u0004\u0018\u00010\t0\t0\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\f\u001a\u0010\u0012\f\u0012\n \n*\u0004\u0018\u00010\t0\t0\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0019\u0010\r\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0019\u0010\u0011\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0010R\u001d\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00050\u0014\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R\u000e\u0010\u0018\u001a\u00020\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0019\u0010\u001b\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u001c\u0010\u0010R\u0017\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00150\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u001e\u0010\u0010R\u0017\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u00150\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b \u0010\u0010R\u000e\u0010!\u001a\u00020\"X\u0082D\u00a2\u0006\u0002\n\u0000R\u0017\u0010#\u001a\b\u0012\u0004\u0012\u00020\u00150\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b$\u0010\u0010\u00a8\u0006-"}, d2 = {"Lcom/example/lunchtray/model/OrderViewModel;", "Landroidx/lifecycle/ViewModel;", "()V", "_accompaniment", "Landroidx/lifecycle/MutableLiveData;", "Lcom/example/lunchtray/model/MenuItem;", "_entree", "_side", "_subtotal", "", "kotlin.jvm.PlatformType", "_tax", "_total", "accompaniment", "Landroidx/lifecycle/LiveData;", "getAccompaniment", "()Landroidx/lifecycle/LiveData;", "entree", "getEntree", "menuItems", "", "", "getMenuItems", "()Ljava/util/Map;", "previousAccompanimentPrice", "previousEntreePrice", "previousSidePrice", "side", "getSide", "subtotal", "getSubtotal", "tax", "getTax", "taxRate", "", "total", "getTotal", "calculatePercent", "", "resetOrder", "setAccompaniment", "setEntree", "setSide", "updateSubtotal", "itemNum", "app_debug"})
+@kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0006\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\t\n\u0002\u0010$\n\u0002\b\u000b\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0006\u0010$\u001a\u00020%J\u0006\u0010&\u001a\u00020%J\u000e\u0010\'\u001a\u00020%2\u0006\u0010\u0012\u001a\u00020\u000fJ\u000e\u0010(\u001a\u00020%2\u0006\u0010\u0014\u001a\u00020\u000fJ\u000e\u0010)\u001a\u00020%2\u0006\u0010\u0016\u001a\u00020\u000fJ\u0010\u0010*\u001a\u00020%2\u0006\u0010+\u001a\u00020\u0005H\u0002R\u001c\u0010\u0003\u001a\u0010\u0012\f\u0012\n \u0006*\u0004\u0018\u00010\u00050\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0007\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\b0\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\t\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\b0\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\n\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\b0\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u000b\u001a\u0010\u0012\f\u0012\n \u0006*\u0004\u0018\u00010\u00050\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\f\u001a\u0010\u0012\f\u0012\n \u0006*\u0004\u0018\u00010\u00050\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0017\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0011R\u0019\u0010\u0012\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\b0\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0011R\u0019\u0010\u0014\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\b0\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0011R\u0019\u0010\u0016\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\b0\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0017\u0010\u0011R\u001d\u0010\u0018\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\b0\u0019\u00a2\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\u001bR\u0017\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u0011R\u000e\u0010\u001e\u001a\u00020\u0005X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u0005X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0005X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0017\u0010!\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\"\u0010\u0011R\u000e\u0010#\u001a\u00020\u0005X\u0082D\u00a2\u0006\u0002\n\u0000\u00a8\u0006,"}, d2 = {"Lcom/example/lunchtray/model/OrderViewModel;", "Landroidx/lifecycle/ViewModel;", "()V", "_count", "Landroidx/lifecycle/MutableLiveData;", "", "kotlin.jvm.PlatformType", "_greek", "Lcom/example/lunchtray/model/MenuItem;", "_hebrew", "_latin", "_percent", "_totcount", "count", "Landroidx/lifecycle/LiveData;", "", "getCount", "()Landroidx/lifecycle/LiveData;", "greek", "getGreek", "hebrew", "getHebrew", "latin", "getLatin", "menuItems", "", "getMenuItems", "()Ljava/util/Map;", "percent", "getPercent", "previousGreekNum", "previousHebrewNum", "previousLatinNum", "totcount", "getTotcount", "totcountact", "calculatePercent", "", "resetOrder", "setGreek", "setHebrew", "setLatin", "updateCount", "itemNum", "app_debug"})
 public final class OrderViewModel extends androidx.lifecycle.ViewModel {
     @org.jetbrains.annotations.NotNull()
     private final java.util.Map<java.lang.String, com.example.lunchtray.model.MenuItem> menuItems = null;
-    private double previousEntreePrice = 0.0;
-    private double previousSidePrice = 0.0;
-    private double previousAccompanimentPrice = 0.0;
-    private final int taxRate = 10;
-    private final androidx.lifecycle.MutableLiveData<com.example.lunchtray.model.MenuItem> _entree = null;
+    private double previousHebrewNum = 0.0;
+    private double previousGreekNum = 0.0;
+    private double previousLatinNum = 0.0;
+    private final double totcountact = 10.0;
+    private final androidx.lifecycle.MutableLiveData<com.example.lunchtray.model.MenuItem> _hebrew = null;
     @org.jetbrains.annotations.NotNull()
-    private final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> entree = null;
-    private final androidx.lifecycle.MutableLiveData<com.example.lunchtray.model.MenuItem> _side = null;
+    private final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> hebrew = null;
+    private final androidx.lifecycle.MutableLiveData<com.example.lunchtray.model.MenuItem> _greek = null;
     @org.jetbrains.annotations.NotNull()
-    private final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> side = null;
-    private final androidx.lifecycle.MutableLiveData<com.example.lunchtray.model.MenuItem> _accompaniment = null;
+    private final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> greek = null;
+    private final androidx.lifecycle.MutableLiveData<com.example.lunchtray.model.MenuItem> _latin = null;
     @org.jetbrains.annotations.NotNull()
-    private final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> accompaniment = null;
-    private final androidx.lifecycle.MutableLiveData<java.lang.Double> _subtotal = null;
+    private final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> latin = null;
+    private final androidx.lifecycle.MutableLiveData<java.lang.Double> _count = null;
     @org.jetbrains.annotations.NotNull()
-    private final androidx.lifecycle.LiveData<java.lang.String> subtotal = null;
-    private final androidx.lifecycle.MutableLiveData<java.lang.Double> _total = null;
+    private final androidx.lifecycle.LiveData<java.lang.String> count = null;
+    private final androidx.lifecycle.MutableLiveData<java.lang.Double> _percent = null;
     @org.jetbrains.annotations.NotNull()
-    private final androidx.lifecycle.LiveData<java.lang.String> total = null;
-    private final androidx.lifecycle.MutableLiveData<java.lang.Double> _tax = null;
+    private final androidx.lifecycle.LiveData<java.lang.String> percent = null;
+    private final androidx.lifecycle.MutableLiveData<java.lang.Double> _totcount = null;
     @org.jetbrains.annotations.NotNull()
-    private final androidx.lifecycle.LiveData<java.lang.String> tax = null;
+    private final androidx.lifecycle.LiveData<java.lang.String> totcount = null;
     
     public OrderViewModel() {
         super();
@@ -39,64 +39,64 @@ public final class OrderViewModel extends androidx.lifecycle.ViewModel {
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> getEntree() {
+    public final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> getHebrew() {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> getSide() {
+    public final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> getGreek() {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> getAccompaniment() {
+    public final androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> getLatin() {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.String> getSubtotal() {
+    public final androidx.lifecycle.LiveData<java.lang.String> getCount() {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.String> getTotal() {
+    public final androidx.lifecycle.LiveData<java.lang.String> getPercent() {
         return null;
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.String> getTax() {
+    public final androidx.lifecycle.LiveData<java.lang.String> getTotcount() {
         return null;
     }
     
     /**
-     * Set the entree for the order.
+     * Set the hebrew for the order.
      */
-    public final void setEntree(@org.jetbrains.annotations.NotNull()
-    java.lang.String entree) {
+    public final void setHebrew(@org.jetbrains.annotations.NotNull()
+    java.lang.String hebrew) {
     }
     
     /**
-     * Set the side for the order.
+     * Set the greek for the order.
      */
-    public final void setSide(@org.jetbrains.annotations.NotNull()
-    java.lang.String side) {
+    public final void setGreek(@org.jetbrains.annotations.NotNull()
+    java.lang.String greek) {
     }
     
     /**
-     * Set the accompaniment for the order.
+     * Set the latin for the order.
      */
-    public final void setAccompaniment(@org.jetbrains.annotations.NotNull()
-    java.lang.String accompaniment) {
+    public final void setLatin(@org.jetbrains.annotations.NotNull()
+    java.lang.String latin) {
     }
     
     /**
-     * Update subtotal value.
+     * Update count value.
      */
-    private final void updateSubtotal(double itemNum) {
+    private final void updateCount(double itemNum) {
     }
     
     /**
-     * Calculate tax and update total.
+     * Calculate totcount and update percent.
      */
     public final void calculatePercent() {
     }

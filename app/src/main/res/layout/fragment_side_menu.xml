@@ -39,19 +39,19 @@
 
                 <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/salad"
+                    android:id="@+id/kurios"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["salad"].name}'
-                    android:onClick='@{() -> viewModel.setSide("salad")}'
-                    tools:text="Side 1" />
+                    android:text='@{viewModel.menuItems["kurios"].name}'
+                    android:onClick='@{() -> viewModel.setGreek("kurios")}'
+                    tools:text="Greek Word 1" />
 
                 <TextView
-                    android:id="@+id/salad_description"
+                    android:id="@+id/kurios_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["salad"].description}'
-                    tools:text="Side 1 description" />
+                    android:text='@{viewModel.menuItems["kurios"].description}'
+                    tools:text="Greek Word 1 Definition" />
 
                 <View
                     style="@style/Widget.LunchTray.Divider"
@@ -59,23 +59,23 @@
                     android:layout_height="1dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/salad_description" />
+                    app:layout_constraintTop_toBottomOf="@id/kurios_description" />
 
                 <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/soup"
+                    android:id="@+id/theopneustos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["soup"].name}'
-                    android:onClick='@{() -> viewModel.setSide("soup")}'
-                    tools:text="Side 2" />
+                    android:text='@{viewModel.menuItems["theopneustos"].name}'
+                    android:onClick='@{() -> viewModel.setGreek("theopneustos")}'
+                    tools:text="Greek Word 2" />
 
                 <TextView
-                    android:id="@+id/soup_description"
+                    android:id="@+id/theopneustos_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["soup"].description}'
-                    tools:text="Side 2 description" />
+                    android:text='@{viewModel.menuItems["theopneustos"].description}'
+                    tools:text="Greek Word 2 Definition" />
 
                 <View
                     style="@style/Widget.LunchTray.Divider"
@@ -83,24 +83,24 @@
                     android:layout_height="1dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/soup_description" />
+                    app:layout_constraintTop_toBottomOf="@id/theopneustos_description" />
 
 
                 <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/potatoes"
+                    android:id="@+id/dikaioo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["potatoes"].name}'
-                    android:onClick='@{() -> viewModel.setSide("potatoes")}'
-                    tools:text="Side 3" />
+                    android:text='@{viewModel.menuItems["dikaioo"].name}'
+                    android:onClick='@{() -> viewModel.setGreek("dikaioo")}'
+                    tools:text="Greek Word 3" />
 
                 <TextView
-                    android:id="@+id/potato_description"
+                    android:id="@+id/dikaioo_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["potatoes"].description}'
-                    tools:text="Side 3 description" />
+                    android:text='@{viewModel.menuItems["dikaioo"].description}'
+                    tools:text="Greek Word 3 Definition" />
 
                 <View
                     style="@style/Widget.LunchTray.Divider"
@@ -108,23 +108,23 @@
                     android:layout_height="1dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/potato_description" />
+                    app:layout_constraintTop_toBottomOf="@id/dikaioo_description" />
 
                 <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/rice"
+                    android:id="@+id/hamartia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["rice"].name}'
-                    android:onClick='@{() -> viewModel.setSide("rice")}'
-                    tools:text="Side 4" />
+                    android:text='@{viewModel.menuItems["hamartia"].name}'
+                    android:onClick='@{() -> viewModel.setGreek("hamartia")}'
+                    tools:text="Greek Word 4" />
 
                 <TextView
-                    android:id="@+id/rice_description"
+                    android:id="@+id/hamartia_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["rice"].description}'
-                    tools:text="Side 4 description" />
+                    android:text='@{viewModel.menuItems["hamartia"].description}'
+                    tools:text="Greek Word 4 Definition" />
 
             </RadioGroup>
 
@@ -142,7 +142,7 @@
             <TextView
                 android:id="@+id/subtotal"
                 style="@style/Widget.LunchTray.TextView.Subtotal"
-                android:text="@{@string/subtotal(viewModel.subtotal)}"
+                android:text="@{@string/subtotal(viewModel.count)}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 tools:text="Words Known: 0.00" />

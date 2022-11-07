@@ -41,27 +41,27 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     private FragmentAccompanimentMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.RadioGroup) bindings[10]
-            , (android.widget.CheckBox) bindings[3]
-            , (android.widget.TextView) bindings[4]
-            , (android.widget.CheckBox) bindings[1]
-            , (android.widget.TextView) bindings[2]
             , (android.widget.Button) bindings[8]
-            , (android.view.View) bindings[11]
-            , (android.widget.Button) bindings[9]
             , (android.widget.CheckBox) bindings[5]
             , (android.widget.TextView) bindings[6]
+            , (android.view.View) bindings[11]
+            , (android.widget.CheckBox) bindings[1]
+            , (android.widget.TextView) bindings[2]
+            , (android.widget.CheckBox) bindings[3]
+            , (android.widget.TextView) bindings[4]
+            , (android.widget.Button) bindings[9]
             , (android.widget.TextView) bindings[7]
             );
-        this.berries.setTag(null);
-        this.berriesDescription.setTag(null);
-        this.bread.setTag(null);
-        this.breadDescription.setTag(null);
         this.cancelButton.setTag(null);
+        this.deus.setTag(null);
+        this.deusDescription.setTag(null);
+        this.fide.setTag(null);
+        this.fideDescription.setTag(null);
+        this.gratia.setTag(null);
+        this.gratiaDescription.setTag(null);
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.nextButton.setTag(null);
-        this.pickles.setTag(null);
-        this.picklesDescription.setTag(null);
         this.subtotal.setTag(null);
         setRootTag(root);
         // listeners
@@ -127,11 +127,11 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelCount((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelSubtotal, int fieldId) {
+    private boolean onChangeViewModelCount(androidx.lifecycle.LiveData<java.lang.String> ViewModelCount, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -148,41 +148,25 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsBread = null;
-        androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
+        java.lang.String viewModelMenuItemsDeusDescription = null;
         com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentMenuFragment = mAccompanimentMenuFragment;
-        java.lang.String viewModelMenuItemsBerriesDescription = null;
-        java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
+        java.lang.String viewModelMenuItemsGratiaName = null;
+        java.lang.String viewModelMenuItemsFideName = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsGratia = null;
         java.util.Map<java.lang.String,com.example.lunchtray.model.MenuItem> viewModelMenuItems = null;
-        java.lang.String viewModelSubtotalGetValue = null;
-        java.lang.String viewModelMenuItemsBreadName = null;
-        java.lang.String viewModelMenuItemsBreadDescription = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsPickles = null;
-        com.example.lunchtray.model.MenuItem viewModelMenuItemsBerries = null;
-        java.lang.String viewModelMenuItemsBerriesName = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelCount = null;
+        java.lang.String viewModelMenuItemsDeusName = null;
+        java.lang.String viewModelMenuItemsGratiaDescription = null;
+        java.lang.String viewModelCountGetValue = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsDeus = null;
+        java.lang.String viewModelMenuItemsFideDescription = null;
+        java.lang.String subtotalAndroidStringSubtotalViewModelCount = null;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
-        java.lang.String viewModelMenuItemsPicklesName = null;
-        java.lang.String viewModelMenuItemsPicklesDescription = null;
+        com.example.lunchtray.model.MenuItem viewModelMenuItemsFide = null;
 
         if ((dirtyFlags & 0xdL) != 0) {
 
 
-
-                if (viewModel != null) {
-                    // read viewModel.subtotal
-                    viewModelSubtotal = viewModel.getSubtotal();
-                }
-                updateLiveDataRegistration(0, viewModelSubtotal);
-
-
-                if (viewModelSubtotal != null) {
-                    // read viewModel.subtotal.getValue()
-                    viewModelSubtotalGetValue = viewModelSubtotal.getValue();
-                }
-
-
-                // read @android:string/subtotal
-                subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
             if ((dirtyFlags & 0xcL) != 0) {
 
                     if (viewModel != null) {
@@ -192,59 +176,75 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
 
                     if (viewModelMenuItems != null) {
-                        // read viewModel.menuItems["bread"]
-                        viewModelMenuItemsBread = viewModelMenuItems.get("bread");
-                        // read viewModel.menuItems["pickles"]
-                        viewModelMenuItemsPickles = viewModelMenuItems.get("pickles");
-                        // read viewModel.menuItems["berries"]
-                        viewModelMenuItemsBerries = viewModelMenuItems.get("berries");
+                        // read viewModel.menuItems["gratia"]
+                        viewModelMenuItemsGratia = viewModelMenuItems.get("gratia");
+                        // read viewModel.menuItems["deus"]
+                        viewModelMenuItemsDeus = viewModelMenuItems.get("deus");
+                        // read viewModel.menuItems["fide"]
+                        viewModelMenuItemsFide = viewModelMenuItems.get("fide");
                     }
 
 
-                    if (viewModelMenuItemsBread != null) {
-                        // read viewModel.menuItems["bread"].name
-                        viewModelMenuItemsBreadName = viewModelMenuItemsBread.getName();
-                        // read viewModel.menuItems["bread"].description
-                        viewModelMenuItemsBreadDescription = viewModelMenuItemsBread.getDescription();
+                    if (viewModelMenuItemsGratia != null) {
+                        // read viewModel.menuItems["gratia"].name
+                        viewModelMenuItemsGratiaName = viewModelMenuItemsGratia.getName();
+                        // read viewModel.menuItems["gratia"].description
+                        viewModelMenuItemsGratiaDescription = viewModelMenuItemsGratia.getDescription();
                     }
-                    if (viewModelMenuItemsPickles != null) {
-                        // read viewModel.menuItems["pickles"].name
-                        viewModelMenuItemsPicklesName = viewModelMenuItemsPickles.getName();
-                        // read viewModel.menuItems["pickles"].description
-                        viewModelMenuItemsPicklesDescription = viewModelMenuItemsPickles.getDescription();
+                    if (viewModelMenuItemsDeus != null) {
+                        // read viewModel.menuItems["deus"].description
+                        viewModelMenuItemsDeusDescription = viewModelMenuItemsDeus.getDescription();
+                        // read viewModel.menuItems["deus"].name
+                        viewModelMenuItemsDeusName = viewModelMenuItemsDeus.getName();
                     }
-                    if (viewModelMenuItemsBerries != null) {
-                        // read viewModel.menuItems["berries"].description
-                        viewModelMenuItemsBerriesDescription = viewModelMenuItemsBerries.getDescription();
-                        // read viewModel.menuItems["berries"].name
-                        viewModelMenuItemsBerriesName = viewModelMenuItemsBerries.getName();
+                    if (viewModelMenuItemsFide != null) {
+                        // read viewModel.menuItems["fide"].name
+                        viewModelMenuItemsFideName = viewModelMenuItemsFide.getName();
+                        // read viewModel.menuItems["fide"].description
+                        viewModelMenuItemsFideDescription = viewModelMenuItemsFide.getDescription();
                     }
             }
+
+                if (viewModel != null) {
+                    // read viewModel.count
+                    viewModelCount = viewModel.getCount();
+                }
+                updateLiveDataRegistration(0, viewModelCount);
+
+
+                if (viewModelCount != null) {
+                    // read viewModel.count.getValue()
+                    viewModelCountGetValue = viewModelCount.getValue();
+                }
+
+
+                // read @android:string/subtotal
+                subtotalAndroidStringSubtotalViewModelCount = subtotal.getResources().getString(R.string.subtotal, viewModelCountGetValue);
         }
         // batch finished
-        if ((dirtyFlags & 0xcL) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.berries, viewModelMenuItemsBerriesName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.berriesDescription, viewModelMenuItemsBerriesDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bread, viewModelMenuItemsBreadName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.breadDescription, viewModelMenuItemsBreadDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.pickles, viewModelMenuItemsPicklesName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.picklesDescription, viewModelMenuItemsPicklesDescription);
-        }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.berries.setOnClickListener(mCallback2);
-            this.bread.setOnClickListener(mCallback1);
             this.cancelButton.setOnClickListener(mCallback4);
+            this.deus.setOnClickListener(mCallback3);
+            this.fide.setOnClickListener(mCallback1);
+            this.gratia.setOnClickListener(mCallback2);
             this.nextButton.setOnClickListener(mCallback5);
-            this.pickles.setOnClickListener(mCallback3);
+        }
+        if ((dirtyFlags & 0xcL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.deus, viewModelMenuItemsDeusName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.deusDescription, viewModelMenuItemsDeusDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.fide, viewModelMenuItemsFideName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.fideDescription, viewModelMenuItemsFideDescription);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.gratia, viewModelMenuItemsGratiaName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.gratiaDescription, viewModelMenuItemsGratiaDescription);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelCount);
         }
     }
     // Listener Stub Implementations
@@ -282,7 +282,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
 
 
-                    viewModel.setAccompaniment("berries");
+                    viewModel.setLatin("gratia");
                 }
                 break;
             }
@@ -317,7 +317,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
 
 
-                    viewModel.setAccompaniment("berries");
+                    viewModel.setLatin("gratia");
                 }
                 break;
             }
@@ -335,7 +335,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
 
 
-                    viewModel.setAccompaniment("bread");
+                    viewModel.setLatin("fide");
                 }
                 break;
             }
@@ -344,7 +344,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.subtotal
+        flag 0 (0x1L): viewModel.count
         flag 1 (0x2L): accompanimentMenuFragment
         flag 2 (0x3L): viewModel
         flag 3 (0x4L): null

@@ -11,10 +11,4 @@ data class MenuItem(
     val description: String,
     val num: Double,
     val type: Int
-) {
-    /**
-     * Getter method for price.
-     * Includes formatting.
-     */
-    fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance().format(num)
-}
+)

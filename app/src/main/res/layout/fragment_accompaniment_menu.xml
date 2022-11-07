@@ -40,41 +40,41 @@
 
                 <!-- TODO: set the accompaniment in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/bread"
+                    android:id="@+id/fide"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["bread"].name}'
-                    android:onClick='@{() -> viewModel.setAccompaniment("bread")}'
-                    tools:text="Accompaniment 1" />
+                    android:text='@{viewModel.menuItems["fide"].name}'
+                    android:onClick='@{() -> viewModel.setLatin("fide")}'
+                    tools:text="Latin Word 1" />
 
                 <TextView
-                    android:id="@+id/bread_description"
+                    android:id="@+id/fide_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["bread"].description}'
-                    tools:text="Accompaniment 1 description" />
+                    android:text='@{viewModel.menuItems["fide"].description}'
+                    tools:text="Latin Word 1 Definition" />
 
                 <View
                     style="@style/Widget.LunchTray.Divider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/bread_description" />
+                    app:layout_constraintTop_toBottomOf="@id/fide_description" />
 
                 <!-- TODO: set the accompaniment in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/berries"
+                    android:id="@+id/gratia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["berries"].name}'
-                    android:onClick='@{() -> viewModel.setAccompaniment("berries")}'
-                    tools:text="Accompaniment 2" />
+                    android:text='@{viewModel.menuItems["gratia"].name}'
+                    android:onClick='@{() -> viewModel.setLatin("gratia")}'
+                    tools:text="Latin Word 2" />
 
                 <TextView
-                    android:id="@+id/berries_description"
+                    android:id="@+id/gratia_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["berries"].description}'
-                    tools:text="Accompaniment 2 description" />
+                    android:text='@{viewModel.menuItems["gratia"].description}'
+                    tools:text="Latin Word 2 Definition" />
 
                 <View
                     style="@style/Widget.LunchTray.Divider"
@@ -82,25 +82,25 @@
                     android:layout_height="1dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/soup_description" />
+                    app:layout_constraintTop_toBottomOf="@id/gratia_description" />
 
                 <!-- TODO: set the RadioButton text to the accompaniment name using the view model -->
                 <!-- TODO: set the accompaniment in the view model when the RadioButton is clicked -->
                 <CheckBox
-                    android:id="@+id/pickles"
+                    android:id="@+id/deus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text='@{viewModel.menuItems["pickles"].name}'
-                    android:onClick='@{() -> viewModel.setAccompaniment("berries")}'
-                    tools:text="Accompaniment 3" />
+                    android:text='@{viewModel.menuItems["deus"].name}'
+                    android:onClick='@{() -> viewModel.setLatin("gratia")}'
+                    tools:text="Latin Word 3" />
 
                 <!-- TODO: set the text to the accompaniment description using the view model -->
                 <TextView
-                    android:id="@+id/pickles_description"
+                    android:id="@+id/deus_description"
                     style="@style/Widget.MenuItem.TextView.Info"
-                    android:text='@{viewModel.menuItems["pickles"].description}'
-                    tools:text="Accompaniment 3 description" />
+                    android:text='@{viewModel.menuItems["deus"].description}'
+                    tools:text="Latin Word 3 Definition" />
 
                 <!-- TODO: set the text to the accompaniment price using the view model -->
 
@@ -120,7 +120,7 @@
             <TextView
                 android:id="@+id/subtotal"
                 style="@style/Widget.LunchTray.TextView.Subtotal"
-                android:text="@{@string/subtotal(viewModel.subtotal)}"
+                android:text="@{@string/subtotal(viewModel.count)}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 tools:text="Words Known: 0.00" />

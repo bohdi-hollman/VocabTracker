@@ -24,16 +24,22 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   public final Button cancelButton;
 
   @NonNull
-  public final CheckBox chili;
-
-  @NonNull
-  public final TextView chiliDescription;
-
-  @NonNull
   public final View divider;
 
   @NonNull
+  public final CheckBox elohim;
+
+  @NonNull
+  public final TextView elohimDescription;
+
+  @NonNull
   public final RadioGroup entreeOptions;
+
+  @NonNull
+  public final CheckBox kabad;
+
+  @NonNull
+  public final TextView kabadDescription;
 
   @NonNull
   public final CheckBox khesed;
@@ -45,19 +51,13 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   public final Button nextButton;
 
   @NonNull
-  public final CheckBox pasta;
-
-  @NonNull
-  public final TextView pastaDescription;
-
-  @NonNull
-  public final CheckBox skillet;
-
-  @NonNull
-  public final TextView skilletDescription;
-
-  @NonNull
   public final TextView subtotal;
+
+  @NonNull
+  public final CheckBox tsedeq;
+
+  @NonNull
+  public final TextView tsedeqDescription;
 
   @Bindable
   protected OrderViewModel mViewModel;
@@ -66,24 +66,24 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   protected EntreeMenuFragment mEntreeMenuFragment;
 
   protected FragmentEntreeMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button cancelButton, CheckBox chili, TextView chiliDescription, View divider,
-      RadioGroup entreeOptions, CheckBox khesed, TextView khesedDescription, Button nextButton,
-      CheckBox pasta, TextView pastaDescription, CheckBox skillet, TextView skilletDescription,
-      TextView subtotal) {
+      Button cancelButton, View divider, CheckBox elohim, TextView elohimDescription,
+      RadioGroup entreeOptions, CheckBox kabad, TextView kabadDescription, CheckBox khesed,
+      TextView khesedDescription, Button nextButton, TextView subtotal, CheckBox tsedeq,
+      TextView tsedeqDescription) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cancelButton = cancelButton;
-    this.chili = chili;
-    this.chiliDescription = chiliDescription;
     this.divider = divider;
+    this.elohim = elohim;
+    this.elohimDescription = elohimDescription;
     this.entreeOptions = entreeOptions;
+    this.kabad = kabad;
+    this.kabadDescription = kabadDescription;
     this.khesed = khesed;
     this.khesedDescription = khesedDescription;
     this.nextButton = nextButton;
-    this.pasta = pasta;
-    this.pastaDescription = pastaDescription;
-    this.skillet = skillet;
-    this.skilletDescription = skilletDescription;
     this.subtotal = subtotal;
+    this.tsedeq = tsedeq;
+    this.tsedeqDescription = tsedeqDescription;
   }
 
   public abstract void setViewModel(@Nullable OrderViewModel viewModel);

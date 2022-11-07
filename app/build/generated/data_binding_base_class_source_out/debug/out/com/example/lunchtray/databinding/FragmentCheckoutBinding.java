@@ -19,31 +19,10 @@ import java.lang.Object;
 
 public abstract class FragmentCheckoutBinding extends ViewDataBinding {
   @NonNull
-  public final TextView accompanimentPrice;
-
-  @NonNull
-  public final TextView accompanimentSelection;
-
-  @NonNull
   public final Button cancelButton;
 
   @NonNull
-  public final View divider;
-
-  @NonNull
-  public final TextView entreePrice;
-
-  @NonNull
-  public final TextView entreeSelection;
-
-  @NonNull
   public final TextView orderSummary;
-
-  @NonNull
-  public final TextView sidePrice;
-
-  @NonNull
-  public final TextView sideSelection;
 
   @NonNull
   public final Button submitButton;
@@ -64,20 +43,11 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
   protected CheckoutFragment mCheckoutFragment;
 
   protected FragmentCheckoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView accompanimentPrice, TextView accompanimentSelection, Button cancelButton,
-      View divider, TextView entreePrice, TextView entreeSelection, TextView orderSummary,
-      TextView sidePrice, TextView sideSelection, Button submitButton, TextView subtotal,
+      Button cancelButton, TextView orderSummary, Button submitButton, TextView subtotal,
       TextView tax, TextView total) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.accompanimentPrice = accompanimentPrice;
-    this.accompanimentSelection = accompanimentSelection;
     this.cancelButton = cancelButton;
-    this.divider = divider;
-    this.entreePrice = entreePrice;
-    this.entreeSelection = entreeSelection;
     this.orderSummary = orderSummary;
-    this.sidePrice = sidePrice;
-    this.sideSelection = sideSelection;
     this.submitButton = submitButton;
     this.subtotal = subtotal;
     this.tax = tax;

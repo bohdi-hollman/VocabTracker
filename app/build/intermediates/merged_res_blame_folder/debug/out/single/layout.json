@@ -8,8 +8,16 @@
         "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_start_order.xml"
     },
     {
+        "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_hebrew.xml",
+        "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_hebrew.xml"
+    },
+    {
         "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_accompaniment_menu.xml",
         "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_accompaniment_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_review.xml",
+        "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_review.xml"
     },
     {
         "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_checkout.xml",
@@ -20,7 +28,15 @@
         "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_entree_menu.xml"
     },
     {
+        "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_latin.xml",
+        "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_latin.xml"
+    },
+    {
         "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_greek.xml",
+        "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_greek.xml"
     }
 ]

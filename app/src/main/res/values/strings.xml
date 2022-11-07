@@ -1,6 +1,7 @@
 
 <resources>
     <string name="app_name">Vocab Tracker</string>
+    <string name="activity_title">Biblical Vocab Tracker</string>
     <string name="tile_start_order">Begin</string>
     <string name="title_coupons">Coupons</string>
     <string name="title_entree_menu">Hebrew Vocab</string>
@@ -8,9 +9,9 @@
     <string name="title_accompaniment_menu">Latin Vocab</string>
     <string name="title_checkout">Review</string>
     <string name="start_order">Track Progress</string>
-    <string name="subtotal">Known Vocab: %s</string>
-    <string name="tax">Total Vocab: %s</string>
-    <string name="total">Percent Known: %s</string>
+    <string name="subtotal">Known Vocab: %s Words</string>
+    <string name="tax">Total Vocab: 10 Words</string>
+    <string name="total">Percent Memorized: %s</string>
     <string name="next">Next</string>
     <string name="order_summary">Vocab Review</string>
     <string name="submit">End Review</string>

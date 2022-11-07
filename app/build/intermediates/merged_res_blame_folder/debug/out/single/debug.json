@@ -12,8 +12,16 @@
         "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\layout\\fragment_accompaniment_menu.xml"
     },
     {
+        "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_languages.jpg.flat",
+        "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\drawable\\languages.jpg"
+    },
+    {
         "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lang.jpg.flat",
+        "source": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\src\\main\\res\\drawable\\lang.jpg"
     },
     {
         "merged": "C:\\Users\\runbo\\Desktop\\Vocab Tracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
