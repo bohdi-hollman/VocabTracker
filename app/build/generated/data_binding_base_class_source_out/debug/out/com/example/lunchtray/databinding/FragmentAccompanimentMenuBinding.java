@@ -53,6 +53,9 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   @NonNull
   public final TextView subtotal;
 
+  @NonNull
+  public final TextView textView;
+
   @Bindable
   protected OrderViewModel mViewModel;
 
@@ -62,7 +65,8 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   protected FragmentAccompanimentMenuBinding(Object _bindingComponent, View _root,
       int _localFieldCount, RadioGroup accompanimentOptions, Button cancelButton, CheckBox deus,
       TextView deusDescription, View divider, CheckBox fide, TextView fideDescription,
-      CheckBox gratia, TextView gratiaDescription, Button nextButton, TextView subtotal) {
+      CheckBox gratia, TextView gratiaDescription, Button nextButton, TextView subtotal,
+      TextView textView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accompanimentOptions = accompanimentOptions;
     this.cancelButton = cancelButton;
@@ -75,6 +79,7 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
     this.gratiaDescription = gratiaDescription;
     this.nextButton = nextButton;
     this.subtotal = subtotal;
+    this.textView = textView;
   }
 
   public abstract void setViewModel(@Nullable OrderViewModel viewModel);

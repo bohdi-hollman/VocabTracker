@@ -54,6 +54,9 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   public final TextView subtotal;
 
   @NonNull
+  public final TextView textView3;
+
+  @NonNull
   public final CheckBox tsedeq;
 
   @NonNull
@@ -68,8 +71,8 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   protected FragmentEntreeMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button cancelButton, View divider, CheckBox elohim, TextView elohimDescription,
       RadioGroup entreeOptions, CheckBox kabad, TextView kabadDescription, CheckBox khesed,
-      TextView khesedDescription, Button nextButton, TextView subtotal, CheckBox tsedeq,
-      TextView tsedeqDescription) {
+      TextView khesedDescription, Button nextButton, TextView subtotal, TextView textView3,
+      CheckBox tsedeq, TextView tsedeqDescription) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cancelButton = cancelButton;
     this.divider = divider;
@@ -82,6 +85,7 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
     this.khesedDescription = khesedDescription;
     this.nextButton = nextButton;
     this.subtotal = subtotal;
+    this.textView3 = textView3;
     this.tsedeq = tsedeq;
     this.tsedeqDescription = tsedeqDescription;
   }

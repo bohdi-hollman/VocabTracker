@@ -38,6 +38,15 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <!-- TODO: set the side in the view model when the RadioButton is clicked -->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="Greek Vocab"
+                    android:textAlignment="center"
+                    android:textSize="34sp" />
+
                 <CheckBox
                     android:id="@+id/kurios"
                     android:layout_width="wrap_content"

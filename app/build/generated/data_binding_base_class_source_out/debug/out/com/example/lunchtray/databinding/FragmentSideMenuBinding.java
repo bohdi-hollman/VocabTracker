@@ -54,6 +54,9 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
   public final TextView subtotal;
 
   @NonNull
+  public final TextView textView2;
+
+  @NonNull
   public final CheckBox theopneustos;
 
   @NonNull
@@ -68,8 +71,8 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
   protected FragmentSideMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button cancelButton, CheckBox dikaioo, TextView dikaiooDescription, View divider,
       CheckBox hamartia, TextView hamartiaDescription, CheckBox kurios, TextView kuriosDescription,
-      Button nextButton, RadioGroup sideOptions, TextView subtotal, CheckBox theopneustos,
-      TextView theopneustosDescription) {
+      Button nextButton, RadioGroup sideOptions, TextView subtotal, TextView textView2,
+      CheckBox theopneustos, TextView theopneustosDescription) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cancelButton = cancelButton;
     this.dikaioo = dikaioo;
@@ -82,6 +85,7 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
     this.nextButton = nextButton;
     this.sideOptions = sideOptions;
     this.subtotal = subtotal;
+    this.textView2 = textView2;
     this.theopneustos = theopneustos;
     this.theopneustosDescription = theopneustosDescription;
   }

@@ -15,7 +15,8 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.accompaniment_options, 10);
-        sViewsWithIds.put(R.id.divider, 11);
+        sViewsWithIds.put(R.id.textView, 11);
+        sViewsWithIds.put(R.id.divider, 12);
     }
     // views
     @NonNull
@@ -36,7 +37,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     // Inverse Binding Event Handlers
 
     public FragmentAccompanimentMenuBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private FragmentAccompanimentMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
@@ -44,13 +45,14 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
             , (android.widget.Button) bindings[8]
             , (android.widget.CheckBox) bindings[5]
             , (android.widget.TextView) bindings[6]
-            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[12]
             , (android.widget.CheckBox) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.CheckBox) bindings[3]
             , (android.widget.TextView) bindings[4]
             , (android.widget.Button) bindings[9]
             , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[11]
             );
         this.cancelButton.setTag(null);
         this.deus.setTag(null);

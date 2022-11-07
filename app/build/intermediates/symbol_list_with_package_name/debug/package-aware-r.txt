@@ -2165,6 +2165,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
+id textView3
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon

@@ -15,7 +15,8 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.side_options, 12);
-        sViewsWithIds.put(R.id.divider, 13);
+        sViewsWithIds.put(R.id.textView2, 13);
+        sViewsWithIds.put(R.id.divider, 14);
     }
     // views
     @NonNull
@@ -38,14 +39,14 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     // Inverse Binding Event Handlers
 
     public FragmentSideMenuBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentSideMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.Button) bindings[10]
             , (android.widget.CheckBox) bindings[5]
             , (android.widget.TextView) bindings[6]
-            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[14]
             , (android.widget.CheckBox) bindings[7]
             , (android.widget.TextView) bindings[8]
             , (android.widget.CheckBox) bindings[1]
@@ -53,6 +54,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
             , (android.widget.Button) bindings[11]
             , (android.widget.RadioGroup) bindings[12]
             , (android.widget.TextView) bindings[9]
+            , (android.widget.TextView) bindings[13]
             , (android.widget.CheckBox) bindings[3]
             , (android.widget.TextView) bindings[4]
             );

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,14 +20,19 @@ public final class FragmentStartOrderBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView imageView2;
+
+  @NonNull
   public final ConstraintLayout layoutStartOrder;
 
   @NonNull
   public final Button startOrderBtn;
 
   private FragmentStartOrderBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout layoutStartOrder, @NonNull Button startOrderBtn) {
+      @NonNull ImageView imageView2, @NonNull ConstraintLayout layoutStartOrder,
+      @NonNull Button startOrderBtn) {
     this.rootView = rootView;
+    this.imageView2 = imageView2;
     this.layoutStartOrder = layoutStartOrder;
     this.startOrderBtn = startOrderBtn;
   }
@@ -58,6 +64,12 @@ public final class FragmentStartOrderBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.imageView2;
+      ImageView imageView2 = rootView.findViewById(id);
+      if (imageView2 == null) {
+        break missingId;
+      }
+
       ConstraintLayout layoutStartOrder = (ConstraintLayout) rootView;
 
       id = R.id.start_order_btn;
@@ -66,8 +78,8 @@ public final class FragmentStartOrderBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentStartOrderBinding((ConstraintLayout) rootView, layoutStartOrder,
-          startOrderBtn);
+      return new FragmentStartOrderBinding((ConstraintLayout) rootView, imageView2,
+          layoutStartOrder, startOrderBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

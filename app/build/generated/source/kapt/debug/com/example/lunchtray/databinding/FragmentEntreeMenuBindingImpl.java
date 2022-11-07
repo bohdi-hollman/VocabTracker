@@ -15,7 +15,8 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.entree_options, 12);
-        sViewsWithIds.put(R.id.divider, 13);
+        sViewsWithIds.put(R.id.textView3, 13);
+        sViewsWithIds.put(R.id.divider, 14);
     }
     // views
     @NonNull
@@ -38,12 +39,12 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
     // Inverse Binding Event Handlers
 
     public FragmentEntreeMenuBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentEntreeMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.Button) bindings[10]
-            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[14]
             , (android.widget.CheckBox) bindings[3]
             , (android.widget.TextView) bindings[4]
             , (android.widget.RadioGroup) bindings[12]
@@ -53,6 +54,7 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
             , (android.widget.TextView) bindings[2]
             , (android.widget.Button) bindings[11]
             , (android.widget.TextView) bindings[9]
+            , (android.widget.TextView) bindings[13]
             , (android.widget.CheckBox) bindings[5]
             , (android.widget.TextView) bindings[6]
             );
