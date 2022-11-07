@@ -54,7 +54,7 @@ class CheckoutFragment : Fragment() {
         val root = binding.root
 
         // Calculate tax and total upon creating the CheckoutFragment view
-        sharedViewModel.calculateTaxAndTotal()
+        sharedViewModel.calculatePercent()
 
         return root
     }

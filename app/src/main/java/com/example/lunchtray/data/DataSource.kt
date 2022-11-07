@@ -8,7 +8,7 @@ import com.example.lunchtray.model.MenuItem
  */
 object DataSource {
     val menuItems = mapOf(
-        "cauliflower" to
+        "khesed" to
         MenuItem(
             name = "חֵסֵד",
             description = "Khesed; Steadfast Love",
@@ -45,8 +45,8 @@ object DataSource {
         ),
         "soup" to
         MenuItem(
-            name = "Butternut Squash Soup",
-            description = "Roasted butternut squash, roasted peppers, chili oil",
+            name = "θεόπνευστος",
+            description = "Theopneustos; God-Breathed",
             num = 1.0,
             type = ItemType.SIDE_DISH
         ),

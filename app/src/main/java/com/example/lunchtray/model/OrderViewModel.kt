@@ -35,7 +35,7 @@ class OrderViewModel : ViewModel() {
     private var previousAccompanimentPrice = 0.0
 
     // Default tax rate
-    private val taxRate = 0.08
+    private val taxRate = 10
 
     // Entree for the order
     private val _entree = MutableLiveData<MenuItem?>()
@@ -155,7 +155,7 @@ class OrderViewModel : ViewModel() {
     /**
      * Update subtotal value.
      */
-    private fun updateSubtotal(itemPrice: Double) {
+    private fun updateSubtotal(itemNum: Double) {
 
         // TODO: if _subtotal.value is not null, update it to reflect the num
         //  of the recently
@@ -164,21 +164,20 @@ class OrderViewModel : ViewModel() {
         //  of the item.
         // TODO: calculate the tax and resulting total
         if (_subtotal.value != null){
-            _subtotal.value = (_subtotal.value)?.plus(itemPrice)
+            _subtotal.value = (_subtotal.value)?.plus(itemNum)
         }else{
-            _subtotal.value = itemPrice
+            _subtotal.value = itemNum
         }
-        calculateTaxAndTotal()
+        calculatePercent()
     }
 
     /**
      * Calculate tax and update total.
      */
-    fun calculateTaxAndTotal() {
+    fun calculatePercent() {
         // TODO: set _tax.value based on the subtotal and the tax rate.
         // TODO: set the total based on the subtotal and _tax.value.
-        _tax.value = (_subtotal.value)?.times(taxRate)
-        _total.value = (_subtotal.value)?.plus(_tax.value!!)
+        _total.value = (_subtotal.value)?.div(_tax.value!!)
     }
 
     /**
